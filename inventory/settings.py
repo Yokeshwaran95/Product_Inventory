@@ -23,7 +23,19 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'prod_app',
+    'rest_framework',
+    'django_elasticsearch_dsl',
+    'django_elasticsearch_dsl_drf',
+    'crispy_forms'
 ]
+
+CRISPY_TEMPLATE_PACK='bootstrap4'
+
+ELASTICSEARCH_DSL={
+    'default': {
+        'hosts':'localhost:9200'
+    }
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
